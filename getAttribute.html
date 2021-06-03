@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+
+<script>
+    
+function getAttributeValue(){
+    var h2Ref=document.getElementById('hid')
+    var attributeValue=h2Ref.getAttribute('name')
+
+    alert(attributeValue)
+    h2Ref.setAttribute('name','name1')
+    var attributeValue1=h2Ref.getAttribute('name')
+    alert(attributeValue1)
+    
+
+    h2Ref.removeAttribute('name','name1')
+    var atttributeValue2=h2Ref.getAttribute('name','name1')
+    alert(atttributeValue2)
+}
+</script>
+</head>
+<body>
+    <h2 id="hid" name="h2name" style="color: blueviolet">welcome to javascript</h2>
+    <button onclick="getAttributeValue()">click me</button>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fnstatus(event){
+            var h2Ref=document.getElementById('h2')
+            if(event.target.id=='GM'){
+                h2Ref.innerText="Hello,Good morning Trupti"
+                h2Ref.style.color="Red"
+            }
+            else if(event.target.id=='GA'){
+             h2Ref.innerText="Hello,Good Afternoon Trupti"
+             h2Ref.style.color="Green"
+
+            }else{
+                h2Ref.innerText="Hello,Good evening Trupti"
+                h2Ref.style.color="Blue"
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align:center ;">
+    <h2 id="h2">welcome to javascript</h2>
+<button id="GM" onclick="fnstatus(event)">Good morning</button>
+<button id="GA" onclick="fnstatus(event)">Good Afternoon</button>
+<button id="GE" onclick="fnstatus(event)">Good evening</button></div>
+</body>
+</html>

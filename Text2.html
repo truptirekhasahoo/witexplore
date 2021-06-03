@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <script>
+        function showHidepassword(){
+            var passwordRef=document.getElementById('pwd')
+            var btnRef=document.getElementById('btn')
+            if(passwordRef.getAttribute('type')=='password'){
+                passwordRef.setAttribute('type','text')
+                btnRef.innerText="Hide Password"
+            }
+            else{
+                passwordRef.setAttribute('type','password')
+                btnRef.innerText="Show Password"
+            }
+            }
+        
+    </script>
+    </head>
+    <body>
+        <div style="text-align: center; margin-top: 100px;">
+        <h2>show/hide password Task</h2>
+    <input type="password" placeholder="Enter password " id="pwd" />
+<button id="btn" onclick="showHidepassword()">show password</button>
+<!-- <button onclick="showHidepassword()">Hide password</button></div> -->
+</body>
+</html>

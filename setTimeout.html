@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function fn1(){
+            setTimeout(function(){
+                 console.log("hello");
+            },3000);
+        }
+        var name;
+        function fn(){
+           name=setInterval(function(){
+                console.log("hi");
+            }, 2000);
+            
+        }
+        function fnclear(){
+            clearInterval(name)
+        }
+    </script>
+    <div style="text-align: center;">
+        <button onclick='fn()'>startTimeout</button>
+        <button onclick='fnclear()'>stopInterval</button>
+    </div>
+</body>
+</html>

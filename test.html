@@ -1,0 +1,37 @@
+<html>
+<body>
+<title>LoginPage</title>
+    <script>
+        function myFunction() {
+            console.log(document)
+          var inputRef1=document.getElementById('textinput')
+          var inputref2=document.getElementById('textpassword')
+          //text value store variable
+          var inputVau1=inputRef1.value
+          var inputvau2=inputref2.value
+          var pRef1=document.getElementById('p1')
+          var pRef2=document.getElementById('p2')
+          //paragram store the data
+          pRef1.innerText=inputVau1
+          pRef2.innerText=inputvau2
+        //   make the empty text box
+          inputRef1.value=""
+          inputref2.value=""
+
+        }
+   </script>
+    <div style='text-align:center'>
+      <p> <input type="text" placeholder="Entername" id="textinput">username</input></p>
+    
+    <p><input type="text" placeholder="Password" id="textpassword">Password</input></p>
+    </div>
+    <div style='text-align:center'>
+        <button type="button" onclick=myFunction()>Click Me!</button>
+    </div>
+    <div >
+    <p id=p1></p>
+    <p id=p2></p>
+</div>
+</body>
+
+</html>

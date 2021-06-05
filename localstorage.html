@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+function fnSetdata(){
+    var name="kabir"
+    var city="Delhi"
+    var email="truptirekha@gmail.com"
+    var phone="8888888"
+    localStorage.setItem('pname',name)
+    localStorage.setItem('pcity',city)
+    localStorage.setItem('pemail',email)
+    localStorage.setItem('pphone',phone)
+}
+function fnGetData(){
+    //alert("working")
+    var pnameRef=document.getElementById('pnameRef')
+    var pcityRef=document.getElementById('pcityRef')
+    var pemailRef=document.getElementById('pemailRef')
+    var pphoneRef=document.getElementById('pphoneRef')
+    
+    var pnameVal=localStorage.getItem('pname')
+    var pcityVal=localStorage.getItem('pcity')
+    var pemailVal=localStorage.getItem('pphone')
+    var pphoneVal=localStorage.getItem('pname')
+
+    
+    pnameRef.innerText=pnameVal
+    pcityRef.innerText=pcityVal
+    pemailRef.innerText=pemailVal
+    pphoneRef.innerText=pphoneVal
+}
+function fnRemoveData(){
+    localStorage.removeItem('pemail')
+    localStorage.removeItem('pcity')
+}
+function fnclear(){
+    localStorage.clear()
+}
+
+</script>
+<body>
+    <div>
+        <button onclick="fnSetdata()">SetData</button>
+        <button onclick="fnGetData()">GetData</button>
+        <button onclick="fnRemoveData()">Remove</button>
+        <button onclick="fnclear()">Clear</button>
+    </div>
+    <div>
+        <p id="pnameRef"></p>
+        <p id="pcityRef"></p>
+        <p id="pemailRef"></p>
+        <p id="pphoneRef"></p>
+    </div>
+</body>
+</html>

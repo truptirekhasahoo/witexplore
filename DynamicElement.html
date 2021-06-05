@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function fn(){
+        var pRef=document.createElement('p')
+        pRef.style.textAlign = "center"
+        var text=document.createTextNode("Hello Javascript")
+        // if(pRef==text){
+        //     console.log(text)
+        // }
+        // else{
+        //     console.log('hi')
+        // }
+        pRef.append(text)
+        document.querySelector('body').appendChild(pRef)
+    }
+</script>
+<body>
+    <div style="text-align: center; margin-top: 100px;">
+    <button onclick="fn()" id="p1">create p element</button></div>
+    
+</body>
+</html>
